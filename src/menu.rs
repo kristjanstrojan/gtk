@@ -2,6 +2,7 @@
 // See the COPYRIGHT file at the top-level directory of this distribution.
 // Licensed under the MIT license, see the LICENSE file or <http://opensource.org/licenses/MIT>
 
+#![feature(ptr_as_ref)]
 use ffi;
 use glib_ffi;
 use glib::object::Downcast;
@@ -14,7 +15,6 @@ use std::mem::transmute;
 use libc::c_int;
 use std::ptr;
 
-#![feature(ptr_as_ref)]
 
 impl Menu {
     pub fn popup<T: IsA<Widget>, U: IsA<Widget>,
