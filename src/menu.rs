@@ -14,6 +14,8 @@ use std::mem::transmute;
 use libc::c_int;
 use std::ptr;
 
+#![feature(ptr_as_ref)]
+
 impl Menu {
     pub fn popup<T: IsA<Widget>, U: IsA<Widget>,
                  F: Fn(&Menu, &mut i32, &mut i32) -> bool + 'static>(
